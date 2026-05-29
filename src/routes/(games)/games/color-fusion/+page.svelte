@@ -12,7 +12,6 @@
 	let result = $state('');
 	let bg = $state('#fff');
 
-	
 	const fuseColors = () => {
 		if (box1 && box2) {
 			const fusedColors = {

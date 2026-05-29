@@ -26,16 +26,34 @@ const config = {
 		csp: {
 			mode: 'hash', // SvelteKit will generate hashes for all inline scripts
 			directives: {
-				'default-src': ['self', 'http://localhost', 'https://localhost'],
+				'default-src': [
+					'self',
+					'http://localhost',
+					'http://localhost:1024',
+					'http://127.0.0.1:1024',
+					'https://localhost',
+					'https://cdn.jsdelivr.net'
+				],
 				'script-src': [
 					'self',
 					'unsafe-inline',
 					'unsafe-eval',
 					'http://localhost',
 					'https://localhost',
-					'https://ssl.gstatic.com'
+					'http://localhost:1024',
+					'http://127.0.0.1:1024',
+					'https://ssl.gstatic.com',
+					'https://cdn.jsdelivr.net'
 				],
-				'img-src': ['self', 'data:', 'http://localhost', 'https://localhost'],
+				'img-src': [
+					'self',
+					'data:',
+					'http://localhost',
+					'https://localhost',
+					'http://localhost:1024',
+					'http://127.0.0.1:1024',
+					'https://cdn.jsdelivr.net'
+				],
 				'style-src': ['self', 'unsafe-inline'],
 				'object-src': ['none']
 			}
